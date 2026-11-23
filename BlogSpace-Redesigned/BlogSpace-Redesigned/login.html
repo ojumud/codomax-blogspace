@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | BlogSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/auth-pages.js" defer></script>
+</head>
+
+<body class="auth-page">
+  <a class="auth-back" href="index.html">← Back to BlogSpace</a>
+  <main class="auth-shell">
+    <section class="auth-visual"><a class="brand brand-inverse" href="index.html"><span
+          class="brand-mark">B</span>BlogSpace<span class="brand-period">.</span></a>
+      <div class="auth-visual-copy"><span class="eyebrow eyebrow-light">GOOD TO HAVE YOU BACK</span>
+        <h1>Pick up<br>where <em>you left off.</em></h1>
+        <p>Your next idea, your next favourite read, your next great story is just around the corner.</p>
+      </div>
+      <div class="auth-visual-foot"><span>WRITE WITH PURPOSE.</span><span>READ WITH CURIOSITY.</span></div>
+    </section>
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-mobile-brand"><a class="brand" href="index.html"><span
+              class="brand-mark">B</span>BlogSpace<span class="brand-period">.</span></a></div>
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>Sign in to BlogSpace.</h2>
+        <p class="auth-intro">Enter your details to access your workspace.</p>
+        <div class="form-message hidden" id="authMessage" role="alert"></div>
+        <form id="loginForm" novalidate>
+          <div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" name="email"
+              type="email" placeholder="you@example.com" autocomplete="email" required></div>
+          <div class="field">
+            <div class="field-label-row"><label for="loginPassword">Password</label><a href="#"
+                id="forgotPassword">Forgot password?</a></div><input id="loginPassword" name="password" type="password"
+              placeholder="Enter your password" autocomplete="current-password" required>
+          </div>
+          <label class="check-row"><input id="rememberMe" type="checkbox"><span>Keep me signed in on this
+              browser</span></label>
+          <button class="btn btn-primary btn-full" id="loginButton" type="submit">Sign in <span>↗</span></button>
+        </form>
+        <p class="auth-switch">New to BlogSpace? <a href="register.html">Create an account</a></p>
+        <p class="auth-disclaimer">Demo project: accounts are stored in this browser only.</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

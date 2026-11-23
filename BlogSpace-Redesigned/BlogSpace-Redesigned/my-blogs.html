@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My articles | BlogSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/blog.js" defer></script>
+  <script src="js/my-blogs.js" defer></script>
+</head>
+
+<body class="app-body" data-protected="true">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"><a class="brand" href="index.html"><span
+          class="brand-mark">B</span>BlogSpace<span class="brand-period">.</span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav"><a class="side-link" href="dashboard.html"><span>▦</span> Overview</a><a
+          class="side-link active" href="my-blogs.html"><span>▤</span> My articles</a><a class="side-link"
+          href="create-blog.html"><span>＋</span> Create article</a></nav>
+      <div class="sidebar-label sidebar-label-spaced">DISCOVER</div>
+      <nav class="side-nav"><a class="side-link" href="index.html"><span>↗</span> View website</a></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span>✦ KEEP CREATING</span>
+          <p>Your next story could be someone's next favourite read.</p>
+        </div><button class="side-link side-logout" data-logout><span>⇥</span> Log out</button>
+      </div>
+    </aside>
+    <main class="app-main">
+      <header class="app-topbar"><button class="menu-toggle app-menu-toggle" id="sidebarToggle"
+          aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> My articles</div>
+        <div class="topbar-user"><span class="user-avatar" id="userInitials">U</span><span id="topbarName">Writer</span>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="welcome-row">
+          <div><span class="eyebrow">YOUR CONTENT LIBRARY</span>
+            <h1>My articles</h1>
+            <p>All your published stories and works in progress.</p>
+          </div><a class="btn btn-primary" href="create-blog.html">＋ Create article</a>
+        </div>
+        <div class="content-panel">
+          <div class="library-toolbar">
+            <div class="filter-tabs"><button class="filter-tab active" data-filter="all">All articles</button><button
+                class="filter-tab" data-filter="published">Published</button><button class="filter-tab"
+                data-filter="draft">Drafts</button></div><label class="search-box"><span>⌕</span><input
+                id="articleSearch" type="search" placeholder="Search your articles..."
+                aria-label="Search your articles"></label>
+          </div>
+          <div class="table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>ARTICLE</th>
+                  <th>CATEGORY</th>
+                  <th>LAST UPDATED</th>
+                  <th>STATUS</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="myArticles"></tbody>
+            </table>
+          </div>
+          <div class="empty-panel hidden" id="myArticlesEmpty">
+            <div class="empty-icon">▤</div>
+            <h3>No articles here yet.</h3>
+            <p>Create an article or change your filter.</p><a class="btn btn-primary" href="create-blog.html">Write an
+              article</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+</body>
+
+</html>

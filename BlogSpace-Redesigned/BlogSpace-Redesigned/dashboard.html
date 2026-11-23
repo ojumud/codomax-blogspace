@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | BlogSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/blog.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+
+<body class="app-body" data-protected="true">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">B</span>BlogSpace<span
+          class="brand-period">.</span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav"><a class="side-link active" href="dashboard.html"><span>▦</span> Overview</a><a
+          class="side-link" href="my-blogs.html"><span>▤</span> My articles</a><a class="side-link"
+          href="create-blog.html"><span>＋</span> Create article</a></nav>
+      <div class="sidebar-label sidebar-label-spaced">DISCOVER</div>
+      <nav class="side-nav"><a class="side-link" href="index.html"><span>↗</span> View website</a></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span>✦ WRITING TIP</span>
+          <p>Great writing starts with a clear idea. Keep showing up.</p>
+        </div><button class="side-link side-logout" data-logout><span>⇥</span> Log out</button>
+      </div>
+    </aside>
+    <main class="app-main">
+      <header class="app-topbar"><button class="menu-toggle app-menu-toggle" id="sidebarToggle"
+          aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> Overview</div>
+        <div class="topbar-user"><span class="user-avatar" id="userInitials">U</span><span id="topbarName">Writer</span>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="welcome-row">
+          <div><span class="eyebrow">YOUR CREATIVE SPACE</span>
+            <h1>Welcome back, <span id="welcomeName">Writer</span>.</h1>
+            <p>Here's what's happening with your stories.</p>
+          </div><a class="btn btn-primary" href="create-blog.html">＋ Write a story</a>
+        </div>
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Total articles</span><span class="stat-icon">▤</span></div><strong
+              id="totalArticles">0</strong><small>All your stories</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Published</span><span class="stat-icon stat-green">↗</span></div><strong
+              id="publishedArticles">0</strong><small>Live on BlogSpace</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Drafts</span><span class="stat-icon stat-amber">✎</span></div><strong
+              id="draftArticles">0</strong><small>Still in progress</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Total views</span><span class="stat-icon stat-purple">◉</span></div><strong
+              id="totalViews">0</strong><small>Reads across your stories</small>
+          </article>
+        </section>
+        <section class="content-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Recent articles</h2>
+              <p>Your latest writing activity.</p>
+            </div><a class="subtle-link" href="my-blogs.html">Manage articles ↗</a>
+          </div>
+          <div class="table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>ARTICLE</th>
+                  <th>CATEGORY</th>
+                  <th>UPDATED</th>
+                  <th>STATUS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="recentArticles"></tbody>
+            </table>
+          </div>
+          <div class="empty-panel hidden" id="dashboardEmpty">
+            <div class="empty-icon">✎</div>
+            <h3>Your writing journey starts here.</h3>
+            <p>Create your first article and it will appear here.</p><a class="btn btn-primary"
+              href="create-blog.html">Create your first article</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+</body>
+
+</html>

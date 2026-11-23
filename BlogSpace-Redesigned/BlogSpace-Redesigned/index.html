@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlogSpace — ideas worth sharing and stories worth reading.">
+  <title>BlogSpace — Ideas worth sharing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/blog.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">B</span>BlogSpace<span
+          class="brand-period">.</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a><a href="#latest">Explore</a><a href="#categories">Categories</a>
+        <span id="guestLinks" class="nav-actions"><a class="nav-login" href="login.html">Log in</a><a
+            class="btn btn-primary btn-small" href="register.html">Get started</a></span>
+        <span id="userLinks" class="nav-actions hidden"><a href="dashboard.html">Dashboard</a><button
+            class="text-button" data-logout>Log out</button></span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> A HOME FOR GREAT IDEAS</span>
+          <h1>Ideas worth sharing.<br><em>Stories worth reading.</em></h1>
+          <p class="hero-description">A space for curious minds, thoughtful perspectives and stories that move
+            conversations forward.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="register.html">Start writing <span>↗</span></a><a
+              class="btn btn-outline" href="#latest">Explore stories</a></div>
+          <div class="hero-note">
+            <div class="avatar-stack"><span>JD</span><span>AM</span><span>SK</span></div><span>Made for readers and
+              storytellers.</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-art-top"><span>THE WEEKLY EDIT</span><span>VOL. 01 / 2026</span></div>
+          <div class="hero-art-image">
+            <div class="hero-art-label">PERSPECTIVES<br><strong>THAT MATTER</strong></div>
+          </div>
+          <div class="hero-art-bottom"><span>Read. Reflect. Create.</span><span>01 — 04</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container category-section" id="categories">
+      <div class="section-heading">
+        <div><span class="eyebrow">FIND YOUR INTEREST</span>
+          <h2>Explore by category</h2>
+        </div><a class="subtle-link" href="#latest">View all stories ↗</a>
+      </div>
+      <div class="category-pills">
+        <button class="category-pill active" data-category="All">All stories</button>
+        <button class="category-pill" data-category="Technology">Technology</button>
+        <button class="category-pill" data-category="Lifestyle">Lifestyle</button>
+        <button class="category-pill" data-category="Business">Business</button>
+        <button class="category-pill" data-category="Education">Education</button>
+        <button class="category-pill" data-category="Personal Growth">Personal Growth</button>
+      </div>
+    </section>
+
+    <section class="container latest-section" id="latest">
+      <div class="section-heading">
+        <div><span class="eyebrow">FRESH PERSPECTIVES</span>
+          <h2>Latest stories</h2>
+          <p class="section-subtitle">Discover ideas and insights from the BlogSpace community.</p>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="homeSearch" type="search" placeholder="Search stories..."
+            aria-label="Search stories"></label>
+      </div>
+      <div class="article-grid" id="homeArticles"></div>
+      <p class="empty-state hidden" id="homeEmpty">No published stories found. Try another search or category.</p>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container newsletter-inner">
+        <div><span class="eyebrow eyebrow-light">STAY IN THE LOOP</span>
+          <h2>Good ideas deserve<br>to be revisited.</h2>
+          <p>Explore thoughtful stories whenever inspiration strikes.</p>
+        </div><a href="register.html" class="btn btn-light">Join the community ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand" href="index.html"><span
+          class="brand-mark">B</span>BlogSpace<span class="brand-period">.</span></a>
+      <p>Ideas worth sharing. Stories worth reading.</p><span>© <span id="year"></span> BlogSpace</span>
+    </div>
+  </footer>
+</body>
+
+</html>

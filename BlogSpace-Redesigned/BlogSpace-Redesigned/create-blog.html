@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create article | BlogSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/blog.js" defer></script>
+  <script src="js/editor.js" defer></script>
+</head>
+
+<body class="app-body" data-protected="true">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"><a class="brand" href="index.html"><span
+          class="brand-mark">B</span>BlogSpace<span class="brand-period">.</span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav"><a class="side-link" href="dashboard.html"><span>▦</span> Overview</a><a class="side-link"
+          href="my-blogs.html"><span>▤</span> My articles</a><a class="side-link active"
+          href="create-blog.html"><span>＋</span> Create article</a></nav>
+      <div class="sidebar-label sidebar-label-spaced">DISCOVER</div>
+      <nav class="side-nav"><a class="side-link" href="index.html"><span>↗</span> View website</a></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span>✦ MAKE IT COUNT</span>
+          <p>One useful idea can make someone's day.</p>
+        </div><button class="side-link side-logout" data-logout><span>⇥</span> Log out</button>
+      </div>
+    </aside>
+    <main class="app-main">
+      <header class="app-topbar"><button class="menu-toggle app-menu-toggle" id="sidebarToggle"
+          aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <a href="my-blogs.html">My articles</a> <span>/</span> Editor
+        </div>
+        <div class="topbar-user"><span class="user-avatar" id="userInitials">U</span><span id="topbarName">Writer</span>
+        </div>
+      </header>
+      <div class="page-content editor-page">
+        <div class="editor-heading">
+          <div><span class="eyebrow">YOUR NEXT BIG IDEA</span>
+            <h1 id="editorHeading">Create an article</h1>
+            <p>Take your time. Good stories are worth telling.</p>
+          </div><a class="btn btn-outline" href="my-blogs.html">← Back to articles</a>
+        </div>
+        <div class="form-message hidden" id="editorMessage" role="alert"></div>
+        <form id="articleForm" class="editor-layout">
+          <section class="editor-main-card">
+            <div class="field"><label for="postTitle">Article title</label><input class="title-input" id="postTitle"
+                maxlength="120" placeholder="Give your story a compelling title..." required>
+              <div class="field-foot"><small>Make it clear, specific and interesting.</small><small><span
+                    id="titleCount">0</span>/120</small></div>
+            </div>
+            <div class="field"><label for="postExcerpt">Short introduction</label><textarea id="postExcerpt" rows="3"
+                maxlength="220" placeholder="A short summary that makes readers want to continue..."
+                required></textarea>
+              <div class="field-foot"><small>This appears on article cards.</small><small><span
+                    id="excerptCount">0</span>/220</small></div>
+            </div>
+            <div class="field"><label for="postContent">Your story</label><textarea id="postContent"
+                class="content-input" rows="18" placeholder="Start writing your article here..."
+                required></textarea><small>Tip: Leave a blank line between paragraphs.</small></div>
+          </section>
+          <aside class="editor-side">
+            <div class="editor-side-card">
+              <h3>Publishing</h3>
+              <p>Choose whether to publish your article now or save it for later.</p><button type="submit" name="intent"
+                value="published" class="btn btn-primary btn-full" id="publishButton">Publish article ↗</button><button
+                type="submit" name="intent" value="draft" class="btn btn-outline btn-full" id="draftButton">Save as
+                draft</button>
+              <p class="small-muted" id="saveHint">Your article is saved in this browser.</p>
+            </div>
+            <div class="editor-side-card">
+              <h3>Article details</h3>
+              <div class="field"><label for="postCategory">Category</label><select id="postCategory" required>
+                  <option value="">Choose a category</option>
+                  <option>Technology</option>
+                  <option>Lifestyle</option>
+                  <option>Business</option>
+                  <option>Education</option>
+                  <option>Personal Growth</option>
+                  <option>Design</option>
+                  <option>Other</option>
+                </select></div>
+              <div class="field"><label for="postImage">Featured image</label><label class="upload-box"
+                  for="postImage"><span class="upload-icon">＋</span><strong>Choose an image</strong><small>JPG, PNG or
+                    WebP · max 3 MB</small></label><input class="visually-hidden" type="file" id="postImage"
+                  accept="image/png,image/jpeg,image/webp"><img id="imagePreview" class="image-preview hidden"
+                  alt="Featured image preview"><button type="button" class="text-button hidden" id="removeImage">Remove
+                  image</button></div>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </main>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+</body>
+
+</html>
